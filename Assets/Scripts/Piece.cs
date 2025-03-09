@@ -6,24 +6,21 @@ using Random = UnityEngine.Random;
 public class Piece : MonoBehaviour
 {
     private Board _board;
-    
-    public Vector3Int Position { get; private set; }
-
     private Vector2Int _translation;
     private int _rotationIndex;
-
-    public Tetromino Tetromino { get; private set; }
-    public Vector3Int[] Cells { get; private set; }
+    [SerializeField] private float _stepDelay = .3f;
+    [SerializeField] private float _lockDelay = .5f;
     
-    public float StepDelay = .3f;
-    public float LockDelay = .5f;
-
+    public Vector3Int Position { get; private set; }
+    public Vector3Int[] Cells { get; private set; }
+    public Tetromino Tetromino { get; private set; }
+    
     private void Start()
     {
         _board = GetComponent<Board>();
     }
 
-    public void Spawn(Vector3Int position, Vector2Int translation,Tetromino tetromino)
+    public void Spawn(Vector3Int position, Vector2Int translation, Tetromino tetromino)
     {
         Position = position;
         _translation = translation;
@@ -123,32 +120,45 @@ public class Piece : MonoBehaviour
             Cells[i] = new Vector3Int(x, y, 0);
         }
     }
-
+    
+    /// Lock this piece in place. Spawn next piece.
     private void Lock(bool isOutOfBounds)
     {
-        if(!isOutOfBounds) _board.SetPiece(this);
+        if (isOutOfBounds)
+        {
+            print("GAME LOST!");
+            _board.SpawnRandomPiece();
+            return;
+        }
+            
+        _board.SetPiece(this);
+        _board.CheckClears();
         _board.SpawnRandomPiece();
     }
 
+    /// keep moving the piece instantly until it hit the bounds or another piece.
     public void HardDrop()
     {
-        while (Move(Vector2Int.down, out _)) continue;
+        bool outOfBounds = false;
+        while (Move(Vector2Int.down, out outOfBounds)) continue;
+        Lock(outOfBounds);
     }
 
-    private int Wrap(int value, int min, int max)
+    private static int Wrap(int value, int min, int max)
     {
         if (value >= max) value = min;
         else if (value <= min) value = max;
         return value;
     }
-
+    
+    /// Automatically move this piece by its translation every stepDelay
     private IEnumerator AutoMove()
     {
         bool isOutOfBounds = false;
         
         while (true)
         {
-            yield return new WaitForSeconds(StepDelay);
+            yield return new WaitForSeconds(_stepDelay);
             _board.ClearPiece(this);
             var isValidPos = Move(_translation, out isOutOfBounds);
             if(!isValidPos || isOutOfBounds) break;

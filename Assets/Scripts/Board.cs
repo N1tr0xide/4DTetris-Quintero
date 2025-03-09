@@ -11,6 +11,7 @@ public class Board : MonoBehaviour
     [SerializeField] private Tilemap _tilemap;
     private Vector2Int _boardSize = new(18, 18);
     private Piece _playerPiece;
+    private int _clearBoxSize = 3; //width and height of clear box in order to gain score.
     
     ///From bottom left position, creates a Rect of the size of the board.
     private RectInt Bounds 
@@ -76,6 +77,13 @@ public class Board : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Checks if a position is valid for the piece in question
+    /// </summary>
+    /// <param name="piece">Piece</param>
+    /// <param name="position">Position to check for</param>
+    /// <param name="isOutOfBounds">if the piece is out of the bounds of the board</param>
+    /// <returns></returns>
     public bool IsValidPosition(Piece piece, Vector3Int position, out bool isOutOfBounds)
     { 
         RectInt bounds = Bounds;
@@ -126,8 +134,56 @@ public class Board : MonoBehaviour
        return vector;
     }
 
-    public void Clears()
+    public void CheckClears()
     {
+        RectInt bounds = Bounds;
         
+        for (int r = bounds.yMin; r < bounds.yMax; r++)
+        {
+            for (int c = bounds.xMin; c < bounds.xMax; c++)
+            {
+                if (IsFullBox(r, c)) ClearBox(r,c);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Checks if every cell in a box of the clearBoxSize has a tile.
+    /// </summary>
+    /// <param name="row">the x position of the box</param>
+    /// <param name="column">the y position of the box</param>
+    /// <returns>True if box is full, call for clear and score increase</returns>
+    private bool IsFullBox(int row, int column)
+    {
+        RectInt bounds = new RectInt(new Vector2Int(row, column), new Vector2Int(_clearBoxSize, _clearBoxSize));
+
+        for (int r = bounds.yMin; r < bounds.yMax; r++)
+        {
+            for (int c = bounds.xMin; c < bounds.xMax; c++)
+            {
+                if (c == 0 && r == 0) return false; //center tile does not count towards clear.
+                Vector3Int position = new Vector3Int(c, r, 0);
+                if (!_tilemap.HasTile(position)) return false;
+            }
+        }
+
+        return true;
+    }
+    
+    private void ClearBox(int row, int column)
+    {
+        // increase score
+        print("SCOREEEEEEEEEEEEEEEE");
+        
+        RectInt bounds = new RectInt(new Vector2Int(row, column), new Vector2Int(_clearBoxSize, _clearBoxSize));
+
+        for (int r = bounds.yMin; r < bounds.yMax; r++)
+        {
+            for (int c = bounds.xMin; c < bounds.xMax; c++)
+            {
+                Vector3Int position = new Vector3Int(c, r, 0);
+                _tilemap.SetTile(position, null);
+            }
+        }
     }
 }
