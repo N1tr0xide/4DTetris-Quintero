@@ -1,23 +1,36 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
 
 public class Piece : MonoBehaviour
 {
     private Board _board;
+    private InputSystem_Actions _input;
     private Vector2Int _translation;
     private int _rotationIndex;
-    [SerializeField] private float _stepDelay = .3f;
-    [SerializeField] private float _lockDelay = .5f;
-    
+    private bool _autoMove, _gameOver;
+    private float _stepDelay = 1f;
+
     public Vector3Int Position { get; private set; }
     public Vector3Int[] Cells { get; private set; }
     public Tetromino Tetromino { get; private set; }
+
+    public event Action OnGameOver;
     
     private void Start()
     {
         _board = GetComponent<Board>();
+        _input = new InputSystem_Actions();
+        _input.Player.Enable();
+        _input.Player.Move.performed += PerformMove;
+        _input.Player.Rotate.performed += PerformRotate;
+    }
+
+    private void OnDisable()
+    {
+        _input.Player.Disable();
     }
 
     public void Spawn(Vector3Int position, Vector2Int translation, Tetromino tetromino)
@@ -39,50 +52,40 @@ public class Piece : MonoBehaviour
             Rotate(1);
         }
         
-        StartCoroutine(AutoMove());
+        if(!_autoMove) StartCoroutine(AutoMove());
+    }
+
+    #region Input Actions
+
+    private void PerformMove(InputAction.CallbackContext obj)
+    {
+        Vector2 v2 = obj.ReadValue<Vector2>();
+        if(v2 is { x: 1, y: 1 } or { x: -1, y: -1 }) return;
+        Vector2Int v2I = Vector2Int.RoundToInt(v2);
+
+        if (v2I == -_translation) //Hard drop if input is inverse of falling direction.
+        {
+            HardDrop();
+            return;
+        }
+        
+        _board.ClearPiece(this);
+        Move(v2I, out _);
+        _board.SetPiece(this);
     }
     
-    private void Update()
+    private void PerformRotate(InputAction.CallbackContext obj)
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            _board.ClearPiece(this);
-            Move(Vector2Int.up, out _);
-            _board.SetPiece(this);
-        }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            _board.ClearPiece(this);
-            Move(Vector2Int.down, out _);
-            _board.SetPiece(this);
-        }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            _board.ClearPiece(this);
-            Move(Vector2Int.left, out _);
-            _board.SetPiece(this);
-        }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            _board.ClearPiece(this);
-            Move(Vector2Int.right, out _);
-            _board.SetPiece(this);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            _board.ClearPiece(this);
-            Rotate(-1);
-            _board.SetPiece(this);
-        }
-        else if (Input.GetKeyDown(KeyCode.X))
-        {
-            _board.ClearPiece(this);
-            Rotate(1);
-            _board.SetPiece(this);
-        }
+        int direction = Mathf.RoundToInt(obj.ReadValue<float>());
+        if(direction is not (1 or -1)) return;
+        
+        _board.ClearPiece(this);
+        Rotate(direction);
+        _board.SetPiece(this);
     }
 
+    #endregion
+    
     private bool Move(Vector2Int translation, out bool isOutOfBounds)
     {
         Vector3Int newPos = Position;
@@ -96,8 +99,19 @@ public class Piece : MonoBehaviour
 
     private void Rotate(int direction)
     {
+        int originalRotationIndex = _rotationIndex;
         _rotationIndex = Wrap(_rotationIndex + direction, 0, 4);
+        
+        ApplyRotationMatrix(direction);
+        if (WallKickCheck(_rotationIndex, direction)) return;
+        
+        //if wall kick, revert the changes
+        _rotationIndex = originalRotationIndex;
+        ApplyRotationMatrix(-direction);
+    }
 
+    private void ApplyRotationMatrix(int direction)
+    {
         for (int i = 0; i < Cells.Length; i++)
         {
             Vector3 cellToRotate = Cells[i];
@@ -105,7 +119,8 @@ public class Piece : MonoBehaviour
 
             switch (Tetromino.TetrominoType)
             {
-                case TetrominoTypes.O: case TetrominoTypes.I: //These pieces need to be offset because of their nature.
+                case TetrominoTypes.O:
+                case TetrominoTypes.I: //These pieces need to be offset because of their nature.
                     cellToRotate.x -= .5f;
                     cellToRotate.y -= .5f;
                     x = Mathf.CeilToInt(cellToRotate.x * TetrominoData.RotationMatrix[0] * direction + cellToRotate.y * TetrominoData.RotationMatrix[1] * direction);
@@ -120,14 +135,33 @@ public class Piece : MonoBehaviour
             Cells[i] = new Vector3Int(x, y, 0);
         }
     }
+
+    private bool WallKickCheck(int rotationIndex, int direction)
+    {
+        int index = GetWallKickIndex(rotationIndex, direction);
+
+        for (int i = 0; i < Tetromino.wallKicks.GetLength(1) -1; i++)
+        {
+            Vector2Int translation = Tetromino.wallKicks[index, i];
+            if (Move(translation, out _)) return true;
+        }
+
+        return false;
+    }
+
+    private int GetWallKickIndex(int rotationIndex, int direction)
+    {
+        int index = rotationIndex * 2;
+        if (direction < 0) index--;
+        return Wrap(index, 0, Tetromino.wallKicks.GetLength(0) -1);
+    }
     
     /// Lock this piece in place. Spawn next piece.
     private void Lock(bool isOutOfBounds)
     {
         if (isOutOfBounds)
         {
-            print("GAME LOST!");
-            _board.SpawnRandomPiece();
+            GameOver();
             return;
         }
             
@@ -137,10 +171,12 @@ public class Piece : MonoBehaviour
     }
 
     /// keep moving the piece instantly until it hit the bounds or another piece.
-    public void HardDrop()
+    private void HardDrop()
     {
         bool outOfBounds = false;
-        while (Move(Vector2Int.down, out outOfBounds)) continue;
+        _board.ClearPiece(this);
+        while (Move(_translation, out outOfBounds)) continue;
+        _board.SetPiece(this);
         Lock(outOfBounds);
     }
 
@@ -154,17 +190,37 @@ public class Piece : MonoBehaviour
     /// Automatically move this piece by its translation every stepDelay
     private IEnumerator AutoMove()
     {
+        _autoMove = true;
         bool isOutOfBounds = false;
         
-        while (true)
+        while (!_gameOver)
         {
             yield return new WaitForSeconds(_stepDelay);
             _board.ClearPiece(this);
-            var isValidPos = Move(_translation, out isOutOfBounds);
-            if(!isValidPos || isOutOfBounds) break;
+            if(!Move(_translation, out isOutOfBounds)) break;
             _board.SetPiece(this);
         }
         
+        print("Auto move end");
         Lock(isOutOfBounds);
+    }
+    
+    /// Ends piece respawning and disables input
+    private void GameOver()
+    {
+        if(_gameOver) return;
+        
+        print("GAME LOST!");
+        _gameOver = true;
+        OnGameOver?.Invoke();
+        _input.Player.Disable();
+    }
+    
+    /// Modifies the current piece step delay by the seconds value, step delay can not be lower than .3 seconds.
+    public void IncreaseStepDelay(float seconds)
+    {
+        if (_stepDelay + seconds < .3f) return;
+        _stepDelay += seconds;
+        print("Step delay is now: " + _stepDelay);
     }
 }

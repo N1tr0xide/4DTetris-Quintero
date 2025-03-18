@@ -13,10 +13,12 @@ public struct Tetromino
     public TetrominoTypes TetrominoType;
     public Tile Tile;
     public Vector2Int[] Cells { get; private set; }
-
+    public Vector2Int[,] wallKicks { get; private set; }
+    
     public void Init()
     {
         Cells = TetrominoData.Cells[TetrominoType];
+        wallKicks = TetrominoData.WallKicks[TetrominoType];
     }
 }
 
@@ -39,4 +41,43 @@ public static class TetrominoData
         { TetrominoTypes.T, new Vector2Int[] { new( 0, 1), new(-1, 0), new( 0, 0), new( 1, 0) } },
         { TetrominoTypes.Z, new Vector2Int[] { new(-1, 1), new( 0, 1), new( 0, 0), new( 1, 0) } },
     };
+    
+    ///Determines how each cell will be moved if after rotation the I piece overlaps with the walls or another piece
+    private static readonly Vector2Int[,] WallKicksI = 
+    {
+        { new(0, 0), new(-2, 0), new(1, 0), new(-2, -1), new(1, 2) },
+        { new(0, 0), new(2, 0), new(-1, 0), new(2, 1), new(-1, -2) },
+        { new(0, 0), new(-1, 0), new(2, 0), new(-1, 2), new(2, -1) },
+        { new(0, 0), new(1, 0), new(-2, 0), new(1, -2), new(-2, 1) },
+        { new(0, 0), new(2, 0), new(-1, 0), new(2, 1), new(-1, -2) },
+        { new(0, 0), new(-2, 0), new(1, 0), new(-2, -1), new(1, 2) },
+        { new(0, 0), new(1, 0), new(-2, 0), new(1, -2), new(-2, 1) },
+        { new(0, 0), new(-1, 0), new(2, 0), new(-1, 2), new(2, -1) }
+    };
+
+    ///Determines how each cell will be moved if after rotation the a piece overlaps with the walls or another piece
+    private static readonly Vector2Int[,] WallKicksJLOSTZ =
+    {
+        { new(0, 0), new(-1, 0), new(-1, 1), new(0, -2), new(-1, -2) },
+        { new(0, 0), new(1, 0), new(1, -1), new(0, 2), new(1, 2) },
+        { new(0, 0), new(1, 0), new(1, -1), new(0, 2), new(1, 2) },
+        { new(0, 0), new(-1, 0), new(-1, 1), new(0, -2), new(-1, -2) },
+        { new(0, 0), new(1, 0), new(1, 1), new(0, -2), new(1, -2) },
+        { new(0, 0), new(-1, 0), new(-1, -1), new(0, 2), new(-1, 2) },
+        { new(0, 0), new(-1, 0), new(-1, -1), new(0, 2), new(-1, 2) },
+        { new(0, 0), new(1, 0), new(1, 1), new(0, -2), new(1, -2) }
+    };
+
+    /// Access wall kicks
+    public static readonly Dictionary<TetrominoTypes, Vector2Int[,]> WallKicks = new()
+    {
+        { TetrominoTypes.I, WallKicksI },
+        { TetrominoTypes.J, WallKicksJLOSTZ },
+        { TetrominoTypes.L, WallKicksJLOSTZ },
+        { TetrominoTypes.O, WallKicksJLOSTZ },
+        { TetrominoTypes.S, WallKicksJLOSTZ },
+        { TetrominoTypes.T, WallKicksJLOSTZ },
+        { TetrominoTypes.Z, WallKicksJLOSTZ },
+    };
+
 }

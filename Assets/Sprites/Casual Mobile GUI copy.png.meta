@@ -1,0 +1,1937 @@
+fileFormatVersion: 2
+guid: 56666bd8073893b4a80901c22510951d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -517972755808532947
+    second: Casual Mobile GUI copy_0
+  - first:
+      213: 685735363984444794
+    second: Casual Mobile GUI copy_1
+  - first:
+      213: 2443094647582821817
+    second: Casual Mobile GUI copy_2
+  - first:
+      213: 3007269211854163209
+    second: Casual Mobile GUI copy_3
+  - first:
+      213: 4546355135830607001
+    second: Casual Mobile GUI copy_4
+  - first:
+      213: -1241821588164836106
+    second: Casual Mobile GUI copy_5
+  - first:
+      213: -9054421735644412259
+    second: Casual Mobile GUI copy_6
+  - first:
+      213: 8305032903955275418
+    second: Casual Mobile GUI copy_7
+  - first:
+      213: 3254786140936402881
+    second: Casual Mobile GUI copy_8
+  - first:
+      213: 6654545029738243769
+    second: Casual Mobile GUI copy_9
+  - first:
+      213: -1915456030268721125
+    second: Casual Mobile GUI copy_10
+  - first:
+      213: -2720912052007964567
+    second: Casual Mobile GUI copy_11
+  - first:
+      213: -8608084915662390997
+    second: Casual Mobile GUI copy_12
+  - first:
+      213: -4733862829406414558
+    second: Casual Mobile GUI copy_13
+  - first:
+      213: 6074779937244818727
+    second: Casual Mobile GUI copy_14
+  - first:
+      213: 1883249976480813929
+    second: Casual Mobile GUI copy_15
+  - first:
+      213: -1159493614683210735
+    second: Casual Mobile GUI copy_16
+  - first:
+      213: 8702287182537097032
+    second: Casual Mobile GUI copy_17
+  - first:
+      213: -7225773466336066477
+    second: Casual Mobile GUI copy_18
+  - first:
+      213: -1433292469344491722
+    second: Casual Mobile GUI copy_19
+  - first:
+      213: -5336592190156680814
+    second: Casual Mobile GUI copy_20
+  - first:
+      213: -3016339386449437737
+    second: Casual Mobile GUI copy_21
+  - first:
+      213: -93164689072340578
+    second: Casual Mobile GUI copy_22
+  - first:
+      213: 7987679500928277787
+    second: Casual Mobile GUI copy_23
+  - first:
+      213: 1447054833646526063
+    second: Casual Mobile GUI copy_24
+  - first:
+      213: 9083886841904798131
+    second: Casual Mobile GUI copy_25
+  - first:
+      213: 4879297691784618929
+    second: Casual Mobile GUI copy_26
+  - first:
+      213: 3743653631072261717
+    second: Casual Mobile GUI copy_27
+  - first:
+      213: 908173010744114640
+    second: Casual Mobile GUI copy_28
+  - first:
+      213: 3095167562537715123
+    second: Casual Mobile GUI copy_29
+  - first:
+      213: -2981326622887746692
+    second: Casual Mobile GUI copy_30
+  - first:
+      213: -451163555172492532
+    second: Casual Mobile GUI copy_31
+  - first:
+      213: 102713627782656237
+    second: Casual Mobile GUI copy_32
+  - first:
+      213: -3183843500877680251
+    second: Casual Mobile GUI copy_33
+  - first:
+      213: 5319485454218763851
+    second: Casual Mobile GUI copy_34
+  - first:
+      213: -8916554004139299989
+    second: Casual Mobile GUI copy_35
+  - first:
+      213: -3872814664862978768
+    second: Casual Mobile GUI copy_36
+  - first:
+      213: 7444717668633667956
+    second: Casual Mobile GUI copy_37
+  - first:
+      213: 5920827524955689651
+    second: Casual Mobile GUI copy_38
+  - first:
+      213: 7999953712029216507
+    second: Casual Mobile GUI copy_39
+  - first:
+      213: -6051966737797494892
+    second: Casual Mobile GUI copy_40
+  - first:
+      213: -7024405229970561421
+    second: Casual Mobile GUI copy_41
+  - first:
+      213: -7491359164588848031
+    second: Casual Mobile GUI copy_42
+  - first:
+      213: -6848396640035924422
+    second: Casual Mobile GUI copy_43
+  - first:
+      213: 3655825247214448375
+    second: Casual Mobile GUI copy_44
+  - first:
+      213: -7994692389146872817
+    second: Casual Mobile GUI copy_45
+  - first:
+      213: -9095039407478547778
+    second: Casual Mobile GUI copy_46
+  - first:
+      213: 3019025213395519302
+    second: Casual Mobile GUI copy_47
+  - first:
+      213: -1552429746170879847
+    second: Casual Mobile GUI copy_48
+  - first:
+      213: -4443396571190420954
+    second: Casual Mobile GUI copy_49
+  - first:
+      213: 2874596962690351901
+    second: Casual Mobile GUI copy_50
+  - first:
+      213: -9146748489201681408
+    second: Casual Mobile GUI copy_51
+  - first:
+      213: -1397667224587565638
+    second: Casual Mobile GUI copy_52
+  - first:
+      213: -3262212540970173639
+    second: Casual Mobile GUI copy_53
+  - first:
+      213: 1452909103756757400
+    second: Casual Mobile GUI copy_54
+  - first:
+      213: -7431617395124072053
+    second: Casual Mobile GUI copy_55
+  - first:
+      213: 4621517420931625451
+    second: Casual Mobile GUI copy_56
+  - first:
+      213: -6708421564811155587
+    second: Casual Mobile GUI copy_57
+  - first:
+      213: 4940894558882854171
+    second: Casual Mobile GUI copy_58
+  - first:
+      213: 8933844385471214427
+    second: Casual Mobile GUI copy_59
+  - first:
+      213: 5701523716569719623
+    second: Casual Mobile GUI copy_60
+  - first:
+      213: 724638419066307175
+    second: Casual Mobile GUI copy_61
+  - first:
+      213: 4731731758512884538
+    second: Casual Mobile GUI copy_62
+  - first:
+      213: -3561622142174822598
+    second: Casual Mobile GUI copy_63
+  - first:
+      213: 5107958446560907606
+    second: Casual Mobile GUI copy_64
+  - first:
+      213: -8233230311929399022
+    second: Casual Mobile GUI copy_65
+  - first:
+      213: -8619311608015050344
+    second: Casual Mobile GUI copy_66
+  - first:
+      213: 6535409547047486875
+    second: Casual Mobile GUI copy_67
+  - first:
+      213: 4547045325633356276
+    second: Casual Mobile GUI copy_68
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_0
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1608
+        width: 105
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d26c3bed58acfc8f0800000000000000
+      internalID: -517972755808532947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_1
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 1622
+        width: 83
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7d473c2ea8348900800000000000000
+      internalID: 685735363984444794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_2
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 1625
+        width: 84
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bd05dd43ad97e120800000000000000
+      internalID: 2443094647582821817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_3
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1623
+        width: 89
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90d498c3a67fbb920800000000000000
+      internalID: 3007269211854163209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_4
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 1518
+        width: 165
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 994c4fd88e5e71f30800000000000000
+      internalID: 4546355135830607001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_5
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1518
+        width: 165
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f4060358d924cee0800000000000000
+      internalID: -1241821588164836106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_6
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 1518
+        width: 165
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d96c650676b385280800000000000000
+      internalID: -9054421735644412259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_7
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 1541
+        width: 202
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9e5f289c67614370800000000000000
+      internalID: 8305032903955275418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_8
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 1541
+        width: 202
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c7f06620c25b2d20800000000000000
+      internalID: 3254786140936402881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_9
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 1605
+        width: 412
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b6a36f7271b95c50800000000000000
+      internalID: 6654545029738243769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_10
+      rect:
+        serializedVersion: 2
+        x: 1789
+        y: 1605
+        width: 398
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b18f3f493eeea65e0800000000000000
+      internalID: -1915456030268721125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_11
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 1605
+        width: 398
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9607cfa97e06d3ad0800000000000000
+      internalID: -2720912052007964567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_12
+      rect:
+        serializedVersion: 2
+        x: 2603
+        y: 1672
+        width: 256
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b297b857060f98880800000000000000
+      internalID: -8608084915662390997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_13
+      rect:
+        serializedVersion: 2
+        x: 2603
+        y: 1605
+        width: 256
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2291ec576d0fd4eb0800000000000000
+      internalID: -4733862829406414558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_14
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1520
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72da528da24fd4450800000000000000
+      internalID: 6074779937244818727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_15
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1520
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 963d66f20e5a22a10800000000000000
+      internalID: 1883249976480813929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_16
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 1512
+        width: 285
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11c397163b6a8efe0800000000000000
+      internalID: -1159493614683210735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_17
+      rect:
+        serializedVersion: 2
+        x: 1789
+        y: 1461
+        width: 398
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84ffe88f51cb4c870800000000000000
+      internalID: 8702287182537097032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_18
+      rect:
+        serializedVersion: 2
+        x: 2192
+        y: 1461
+        width: 398
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 354889fe055e8bb90800000000000000
+      internalID: -7225773466336066477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_19
+      rect:
+        serializedVersion: 2
+        x: 2599
+        y: 1537
+        width: 312
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 637aa71d71ceb1ce0800000000000000
+      internalID: -1433292469344491722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_20
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1332
+        width: 183
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29156927dad90f5b0800000000000000
+      internalID: -5336592190156680814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_21
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1323
+        width: 182
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7db59ac2f4fc326d0800000000000000
+      internalID: -3016339386449437737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_22
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1319
+        width: 191
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e91cb3a753305bef0800000000000000
+      internalID: -93164689072340578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_23
+      rect:
+        serializedVersion: 2
+        x: 2599
+        y: 1481
+        width: 312
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1ddf708f20f9de60800000000000000
+      internalID: 7987679500928277787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_24
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1122
+        width: 188
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6e530254b8f41410800000000000000
+      internalID: 1447054833646526063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_25
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1122
+        width: 188
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b9949744f2701e70800000000000000
+      internalID: 9083886841904798131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_26
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 1122
+        width: 154
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b3a438266fb6b340800000000000000
+      internalID: 4879297691784618929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_27
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 528
+        width: 1396
+        height: 927
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 556d92a842124f330800000000000000
+      internalID: 3743653631072261717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_28
+      rect:
+        serializedVersion: 2
+        x: 2165
+        y: 660
+        width: 618
+        height: 798
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ddfff3aa8a7a9c00800000000000000
+      internalID: 908173010744114640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_29
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 989
+        width: 108
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b54f5dcf7e34fa20800000000000000
+      internalID: 3095167562537715123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_30
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 984
+        width: 99
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c736c537b3330a6d0800000000000000
+      internalID: -2981326622887746692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_31
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 984
+        width: 105
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0b575e03252db9f0800000000000000
+      internalID: -451163555172492532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_32
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 989
+        width: 134
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de0b3911089ec6100800000000000000
+      internalID: 102713627782656237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_33
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 833
+        width: 73
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 581ffb56437b0d3d0800000000000000
+      internalID: -3183843500877680251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_34
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 835
+        width: 87
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4e119636db92d940800000000000000
+      internalID: 5319485454218763851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_35
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 837
+        width: 128
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6ba0ba0069024480800000000000000
+      internalID: -8916554004139299989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_36
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 910
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03d2be3d49ff04ac0800000000000000
+      internalID: -3872814664862978768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_37
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 912
+        width: 80
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 479ebfb9643f05760800000000000000
+      internalID: 7444717668633667956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_38
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 876
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b2d65993410b2250800000000000000
+      internalID: 5920827524955689651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_39
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 878
+        width: 80
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfea119f38b850f60800000000000000
+      internalID: 7999953712029216507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_40
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 842
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 497c9111158130ca0800000000000000
+      internalID: -6051966737797494892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_41
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 844
+        width: 80
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 376653509ac448e90800000000000000
+      internalID: -7024405229970561421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_42
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 672
+        width: 54
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16c80ddd788590890800000000000000
+      internalID: -7491359164588848031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_43
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 668
+        width: 136
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a361ead4a8b95f0a0800000000000000
+      internalID: -6848396640035924422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_44
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 683
+        width: 124
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fe2f1561b91cb230800000000000000
+      internalID: 3655825247214448375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_45
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 684
+        width: 126
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f04b16831a52d0190800000000000000
+      internalID: -7994692389146872817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_46
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 530
+        width: 79
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebadf03b8dde7c180800000000000000
+      internalID: -9095039407478547778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_47
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 520
+        width: 100
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6474364af6bb5e920800000000000000
+      internalID: 3019025213395519302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_48
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 530
+        width: 70
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9902cb8fe59a47ae0800000000000000
+      internalID: -1552429746170879847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_49
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 551
+        width: 28
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62a91025c52e552c0800000000000000
+      internalID: -4443396571190420954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_50
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 535
+        width: 37
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d13439115be94e720800000000000000
+      internalID: 2874596962690351901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_51
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 521
+        width: 128
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00cfa4be5b8301180800000000000000
+      internalID: -9146748489201681408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_52
+      rect:
+        serializedVersion: 2
+        x: 2163
+        y: 384
+        width: 270
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab5804c701d7a9ce0800000000000000
+      internalID: -1397667224587565638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_53
+      rect:
+        serializedVersion: 2
+        x: 2456
+        y: 384
+        width: 270
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93bf5a95afa4ab2d0800000000000000
+      internalID: -3262212540970173639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_54
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 358
+        width: 93
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8994a5cc125c92410800000000000000
+      internalID: 1452909103756757400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_55
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 368
+        width: 130
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8114018a579dd890800000000000000
+      internalID: -7431617395124072053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_56
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 368
+        width: 141
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be1b8e5cb9de22040800000000000000
+      internalID: 4621517420931625451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_57
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 360
+        width: 77
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d776cd92126e6e2a0800000000000000
+      internalID: -6708421564811155587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_58
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 161
+        width: 1295
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b157fde5c65919440800000000000000
+      internalID: 4940894558882854171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_59
+      rect:
+        serializedVersion: 2
+        x: 2152
+        y: 183
+        width: 674
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5331a292246bfb70800000000000000
+      internalID: 8933844385471214427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_60
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 221
+        width: 115
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7436a9cbc91ef1f40800000000000000
+      internalID: 5701523716569719623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_61
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 248
+        width: 101
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7624c078dce6e0a00800000000000000
+      internalID: 724638419066307175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_62
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 225
+        width: 117
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3b489ee6fc7aa140800000000000000
+      internalID: 4731731758512884538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_63
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 225
+        width: 121
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3ff08f2883929ec0800000000000000
+      internalID: -3561622142174822598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_64
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 84
+        width: 45
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65118bed42d13e640800000000000000
+      internalID: 5107958446560907606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_65
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 74
+        width: 125
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 219387f17a0bdbd80800000000000000
+      internalID: -8233230311929399022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_66
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 74
+        width: 110
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 899acd372cd026880800000000000000
+      internalID: -8619311608015050344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_67
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 75
+        width: 106
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9546716b5072ba50800000000000000
+      internalID: 6535409547047486875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Casual Mobile GUI copy_68
+      rect:
+        serializedVersion: 2
+        x: 2152
+        y: 14
+        width: 673
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f10af3e1a95a1f30800000000000000
+      internalID: 4547045325633356276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Casual Mobile GUI copy_0: -517972755808532947
+      Casual Mobile GUI copy_1: 685735363984444794
+      Casual Mobile GUI copy_10: -1915456030268721125
+      Casual Mobile GUI copy_11: -2720912052007964567
+      Casual Mobile GUI copy_12: -8608084915662390997
+      Casual Mobile GUI copy_13: -4733862829406414558
+      Casual Mobile GUI copy_14: 6074779937244818727
+      Casual Mobile GUI copy_15: 1883249976480813929
+      Casual Mobile GUI copy_16: -1159493614683210735
+      Casual Mobile GUI copy_17: 8702287182537097032
+      Casual Mobile GUI copy_18: -7225773466336066477
+      Casual Mobile GUI copy_19: -1433292469344491722
+      Casual Mobile GUI copy_2: 2443094647582821817
+      Casual Mobile GUI copy_20: -5336592190156680814
+      Casual Mobile GUI copy_21: -3016339386449437737
+      Casual Mobile GUI copy_22: -93164689072340578
+      Casual Mobile GUI copy_23: 7987679500928277787
+      Casual Mobile GUI copy_24: 1447054833646526063
+      Casual Mobile GUI copy_25: 9083886841904798131
+      Casual Mobile GUI copy_26: 4879297691784618929
+      Casual Mobile GUI copy_27: 3743653631072261717
+      Casual Mobile GUI copy_28: 908173010744114640
+      Casual Mobile GUI copy_29: 3095167562537715123
+      Casual Mobile GUI copy_3: 3007269211854163209
+      Casual Mobile GUI copy_30: -2981326622887746692
+      Casual Mobile GUI copy_31: -451163555172492532
+      Casual Mobile GUI copy_32: 102713627782656237
+      Casual Mobile GUI copy_33: -3183843500877680251
+      Casual Mobile GUI copy_34: 5319485454218763851
+      Casual Mobile GUI copy_35: -8916554004139299989
+      Casual Mobile GUI copy_36: -3872814664862978768
+      Casual Mobile GUI copy_37: 7444717668633667956
+      Casual Mobile GUI copy_38: 5920827524955689651
+      Casual Mobile GUI copy_39: 7999953712029216507
+      Casual Mobile GUI copy_4: 4546355135830607001
+      Casual Mobile GUI copy_40: -6051966737797494892
+      Casual Mobile GUI copy_41: -7024405229970561421
+      Casual Mobile GUI copy_42: -7491359164588848031
+      Casual Mobile GUI copy_43: -6848396640035924422
+      Casual Mobile GUI copy_44: 3655825247214448375
+      Casual Mobile GUI copy_45: -7994692389146872817
+      Casual Mobile GUI copy_46: -9095039407478547778
+      Casual Mobile GUI copy_47: 3019025213395519302
+      Casual Mobile GUI copy_48: -1552429746170879847
+      Casual Mobile GUI copy_49: -4443396571190420954
+      Casual Mobile GUI copy_5: -1241821588164836106
+      Casual Mobile GUI copy_50: 2874596962690351901
+      Casual Mobile GUI copy_51: -9146748489201681408
+      Casual Mobile GUI copy_52: -1397667224587565638
+      Casual Mobile GUI copy_53: -3262212540970173639
+      Casual Mobile GUI copy_54: 1452909103756757400
+      Casual Mobile GUI copy_55: -7431617395124072053
+      Casual Mobile GUI copy_56: 4621517420931625451
+      Casual Mobile GUI copy_57: -6708421564811155587
+      Casual Mobile GUI copy_58: 4940894558882854171
+      Casual Mobile GUI copy_59: 8933844385471214427
+      Casual Mobile GUI copy_6: -9054421735644412259
+      Casual Mobile GUI copy_60: 5701523716569719623
+      Casual Mobile GUI copy_61: 724638419066307175
+      Casual Mobile GUI copy_62: 4731731758512884538
+      Casual Mobile GUI copy_63: -3561622142174822598
+      Casual Mobile GUI copy_64: 5107958446560907606
+      Casual Mobile GUI copy_65: -8233230311929399022
+      Casual Mobile GUI copy_66: -8619311608015050344
+      Casual Mobile GUI copy_67: 6535409547047486875
+      Casual Mobile GUI copy_68: 4547045325633356276
+      Casual Mobile GUI copy_7: 8305032903955275418
+      Casual Mobile GUI copy_8: 3254786140936402881
+      Casual Mobile GUI copy_9: 6654545029738243769
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

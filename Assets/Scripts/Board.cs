@@ -1,19 +1,13 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
 
+[RequireComponent(typeof(Piece))]
 public class Board : MonoBehaviour
 {
-    [SerializeField] private Tetromino[] _tetrominoes;
-    [SerializeField] private Tetromino _startingTetromino;
-    [SerializeField] private Tilemap _tilemap;
-    private Vector2Int _boardSize = new(18, 18);
     private Piece _playerPiece;
     private int _clearBoxSize = 3; //width and height of clear box in order to gain score.
-    
-    ///From bottom left position, creates a Rect of the size of the board.
     private RectInt Bounds 
     {
         get
@@ -22,15 +16,14 @@ public class Board : MonoBehaviour
             return new RectInt(position, _boardSize * 2);
         }
     }
+    
+    [SerializeField] private Tilemap _tilemap;
+    [SerializeField] private Vector2Int _boardSize = new(18, 18);
+    [SerializeField] private Tetromino[] _tetrominoes;
+    [SerializeField] private BoardSpawnPoint[] _spawnPoints;
 
-    private readonly Dictionary<string, Vector2Int> _spawnPositions = new()
-    {
-        { "top", new Vector2Int(0, 16) },
-        { "bottom", new Vector2Int(0, -16) },
-        { "left", new Vector2Int(-16, 0) },
-        { "right", new Vector2Int(16, 0) },
-    };
-
+    public event Action OnClear;
+    
     private void Awake()
     {
         _playerPiece = GetComponent<Piece>();
@@ -45,14 +38,13 @@ public class Board : MonoBehaviour
     void Start()
     {
         SpawnRandomPiece();
-        _tilemap.SetTile(Vector3Int.zero, _startingTetromino.Tile);
     }
 
     public void SpawnRandomPiece()
     {
         Tetromino tetromino = _tetrominoes[Random.Range(0, _tetrominoes.Length)];
-        Vector2Int randomSpawnPoint = GetRandomSpawnPoint(out Vector2Int translation);
-        _playerPiece.Spawn((Vector3Int)randomSpawnPoint, translation, tetromino);
+        BoardSpawnPoint randomSpawnPoint = _spawnPoints[Random.Range(0, _spawnPoints.Length)];
+        _playerPiece.Spawn((Vector3Int)randomSpawnPoint.SpawnPoint, randomSpawnPoint.Translation, tetromino);
         SetPiece(_playerPiece);
     }
     
@@ -76,14 +68,11 @@ public class Board : MonoBehaviour
             _tilemap.SetTile(tilePosition, null);
         }
     }
-
-    /// <summary>
+    
     /// Checks if a position is valid for the piece in question
-    /// </summary>
     /// <param name="piece">Piece</param>
     /// <param name="position">Position to check for</param>
     /// <param name="isOutOfBounds">if the piece is out of the bounds of the board</param>
-    /// <returns></returns>
     public bool IsValidPosition(Piece piece, Vector3Int position, out bool isOutOfBounds)
     { 
         RectInt bounds = Bounds;
@@ -105,35 +94,6 @@ public class Board : MonoBehaviour
         return true; 
     }
 
-    private Vector2Int GetRandomSpawnPoint(out Vector2Int translation)
-    {
-       int randomInt = Random.Range(0, _spawnPositions.Count);
-       Vector2Int vector = Vector2Int.zero;
-       translation = Vector2Int.zero;
-
-       switch (randomInt)
-       {
-           case 0:
-               vector = _spawnPositions["top"];
-               translation = Vector2Int.down;
-               break;
-           case 1:
-               vector = _spawnPositions["bottom"];
-               translation = Vector2Int.up;
-               break;
-           case 2:
-               vector = _spawnPositions["left"];
-               translation = Vector2Int.right;
-               break;
-           case 3:
-               vector = _spawnPositions["right"];
-               translation = Vector2Int.left;
-               break;
-       }
-
-       return vector;
-    }
-
     public void CheckClears()
     {
         RectInt bounds = Bounds;
@@ -146,13 +106,10 @@ public class Board : MonoBehaviour
             }
         }
     }
-
-    /// <summary>
+    
     /// Checks if every cell in a box of the clearBoxSize has a tile.
-    /// </summary>
     /// <param name="row">the x position of the box</param>
     /// <param name="column">the y position of the box</param>
-    /// <returns>True if box is full, call for clear and score increase</returns>
     private bool IsFullBox(int row, int column)
     {
         RectInt bounds = new RectInt(new Vector2Int(row, column), new Vector2Int(_clearBoxSize, _clearBoxSize));
@@ -172,8 +129,7 @@ public class Board : MonoBehaviour
     
     private void ClearBox(int row, int column)
     {
-        // increase score
-        print("SCOREEEEEEEEEEEEEEEE");
+        OnClear?.Invoke();
         
         RectInt bounds = new RectInt(new Vector2Int(row, column), new Vector2Int(_clearBoxSize, _clearBoxSize));
 
