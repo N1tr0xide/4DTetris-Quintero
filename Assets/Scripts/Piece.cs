@@ -11,7 +11,9 @@ public class Piece : MonoBehaviour
     private Vector2Int _translation;
     private int _rotationIndex;
     private bool _autoMove, _gameOver;
-    private float _stepDelay = 1f;
+    private float _stepDelay = 1f, _currentStepTime;
+
+    [SerializeField] private bool _enablePlayerInput;
 
     public Vector3Int Position { get; private set; }
     public Vector3Int[] Cells { get; private set; }
@@ -22,6 +24,8 @@ public class Piece : MonoBehaviour
     private void Start()
     {
         _board = GetComponent<Board>();
+        
+        if(!_enablePlayerInput) return;
         _input = new InputSystem_Actions();
         _input.Player.Enable();
         _input.Player.Move.performed += PerformMove;
@@ -39,10 +43,11 @@ public class Piece : MonoBehaviour
         _translation = translation;
         Tetromino = tetromino;
         _rotationIndex = 0;
+        _currentStepTime = 0;
 
         Cells = new Vector3Int[Tetromino.Cells.Length];
 
-        for (int i = Tetromino.Cells.Length -1; i >= 0; i--)
+        for (int i = 0; i < Tetromino.Cells.Length; i++)
         {
             Cells[i] = (Vector3Int)Tetromino.Cells[i];
         }
@@ -51,6 +56,14 @@ public class Piece : MonoBehaviour
         {
             Rotate(1);
         }
+
+        if (!_board.IsValidOnTilemap(this, Position))
+        {
+            print("init lock: " + Position + " : " + Tetromino.TetrominoType);
+            Lock(true);
+        }
+        
+        _board.SetPiece(this);
         
         if(!_autoMove) StartCoroutine(AutoMove());
     }
@@ -68,9 +81,15 @@ public class Piece : MonoBehaviour
             HardDrop();
             return;
         }
-        
+
         _board.ClearPiece(this);
-        Move(v2I, out _);
+        
+        if (!Move(v2I, out bool outOfBounds))
+        {
+            Lock(outOfBounds);
+            return;
+        }
+        
         _board.SetPiece(this);
     }
     
@@ -92,9 +111,12 @@ public class Piece : MonoBehaviour
         newPos.x += translation.x;
         newPos.y += translation.y;
         
-        bool isValid = _board.IsValidPosition(this, newPos, out isOutOfBounds);
-        if (isValid) Position = newPos;
-        return isValid;
+        bool isValidTile = _board.IsValidOnTilemap(this, newPos);
+        bool isValidOnBounds = _board.IsValidOnBounds(newPos);
+        isOutOfBounds = !isValidOnBounds; //if piece is not on valid bounds it means it's out Of Bounds :)
+        
+        if (isValidTile && isValidOnBounds) Position = newPos;
+        return isValidTile && isValidOnBounds;
     }
 
     private void Rotate(int direction)
@@ -126,7 +148,7 @@ public class Piece : MonoBehaviour
                     x = Mathf.CeilToInt(cellToRotate.x * TetrominoData.RotationMatrix[0] * direction + cellToRotate.y * TetrominoData.RotationMatrix[1] * direction);
                     y = Mathf.CeilToInt(cellToRotate.x * TetrominoData.RotationMatrix[2] * direction + cellToRotate.y * TetrominoData.RotationMatrix[3] * direction);
                     break;
-                default:
+                case TetrominoTypes.T: case TetrominoTypes.L: case TetrominoTypes.J: case TetrominoTypes.S: case TetrominoTypes.Z: default:
                     x = Mathf.RoundToInt(cellToRotate.x * TetrominoData.RotationMatrix[0] * direction + cellToRotate.y * TetrominoData.RotationMatrix[1] * direction);
                     y = Mathf.RoundToInt(cellToRotate.x * TetrominoData.RotationMatrix[2] * direction + cellToRotate.y * TetrominoData.RotationMatrix[3] * direction);
                     break;
@@ -159,7 +181,7 @@ public class Piece : MonoBehaviour
     /// Lock this piece in place. Spawn next piece.
     private void Lock(bool isOutOfBounds)
     {
-        if (isOutOfBounds)
+        if (isOutOfBounds && _enablePlayerInput)
         {
             GameOver();
             return;
@@ -191,18 +213,24 @@ public class Piece : MonoBehaviour
     private IEnumerator AutoMove()
     {
         _autoMove = true;
-        bool isOutOfBounds = false;
-        
+
         while (!_gameOver)
         {
-            yield return new WaitForSeconds(_stepDelay);
+            while (_currentStepTime < _stepDelay)
+            {
+                yield return new WaitForEndOfFrame();
+                _currentStepTime += Time.deltaTime;
+            }
+
+            _currentStepTime = 0;
             _board.ClearPiece(this);
-            if(!Move(_translation, out isOutOfBounds)) break;
+            if (!Move(_translation, out bool isOutOfBounds))
+            {
+                Lock(isOutOfBounds);
+                _board.SetPiece(this);
+            }
             _board.SetPiece(this);
         }
-        
-        print("Auto move end");
-        Lock(isOutOfBounds);
     }
     
     /// Ends piece respawning and disables input

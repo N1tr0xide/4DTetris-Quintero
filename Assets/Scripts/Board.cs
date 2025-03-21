@@ -45,7 +45,6 @@ public class Board : MonoBehaviour
         Tetromino tetromino = _tetrominoes[Random.Range(0, _tetrominoes.Length)];
         BoardSpawnPoint randomSpawnPoint = _spawnPoints[Random.Range(0, _spawnPoints.Length)];
         _playerPiece.Spawn((Vector3Int)randomSpawnPoint.SpawnPoint, randomSpawnPoint.Translation, tetromino);
-        SetPiece(_playerPiece);
     }
     
     /// Sets the position of the piece
@@ -69,29 +68,23 @@ public class Board : MonoBehaviour
         }
     }
     
-    /// Checks if a position is valid for the piece in question
-    /// <param name="piece">Piece</param>
-    /// <param name="position">Position to check for</param>
-    /// <param name="isOutOfBounds">if the piece is out of the bounds of the board</param>
-    public bool IsValidPosition(Piece piece, Vector3Int position, out bool isOutOfBounds)
-    { 
-        RectInt bounds = Bounds;
-        isOutOfBounds = false;
-        
+    /// Checks if a position is valid for the piece in question. Checks tilemap only.
+    public bool IsValidOnTilemap(Piece piece, Vector3Int position)
+    {
         foreach (Vector3Int cell in piece.Cells)
         {
             Vector3Int tilePosition = cell + position;
-            
-            if (!bounds.Contains((Vector2Int)position))
-            {
-                ClearPiece(piece);
-                isOutOfBounds = true;
-                return false;
-            }
             if (_tilemap.HasTile(tilePosition)) return false;
         } 
         
         return true; 
+    }
+    
+    /// Checks if a position is valid for the piece in question. Checks Bounds only.
+    public bool IsValidOnBounds(Vector3Int position)
+    {
+        RectInt bounds = Bounds;
+        return bounds.Contains((Vector2Int)position);
     }
 
     public void CheckClears()
@@ -108,8 +101,8 @@ public class Board : MonoBehaviour
     }
     
     /// Checks if every cell in a box of the clearBoxSize has a tile.
-    /// <param name="row">the x position of the box</param>
-    /// <param name="column">the y position of the box</param>
+    /// <param name="row">the min x position of the box</param>
+    /// <param name="column">the min y position of the box</param>
     private bool IsFullBox(int row, int column)
     {
         RectInt bounds = new RectInt(new Vector2Int(row, column), new Vector2Int(_clearBoxSize, _clearBoxSize));
@@ -127,6 +120,11 @@ public class Board : MonoBehaviour
         return true;
     }
     
+    /// <summary>
+    /// Clears every tile in a box the size of the clearBoxSize.
+    /// </summary>
+    /// <param name="row">the min x position of the box</param>
+    /// <param name="column">the min y position of the box</param>
     private void ClearBox(int row, int column)
     {
         OnClear?.Invoke();
