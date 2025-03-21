@@ -435,10 +435,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Board
       objectReference: {fileID: 0}
-    - target: {fileID: 1548628711021064325, guid: c6de261c025fce549b64e681eddb5c5a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4525000742251974382, guid: c6de261c025fce549b64e681eddb5c5a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -478,10 +474,6 @@ PrefabInstance:
     - target: {fileID: 4525000742251974382, guid: c6de261c025fce549b64e681eddb5c5a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7791903422853127535, guid: c6de261c025fce549b64e681eddb5c5a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
