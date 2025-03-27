@@ -34,6 +34,7 @@ public class Piece : MonoBehaviour
 
     private void OnDisable()
     {
+        if (!_enablePlayerInput) return;
         _input.Player.Disable();
     }
 
@@ -247,8 +248,7 @@ public class Piece : MonoBehaviour
     /// Modifies the current piece step delay by the seconds value, step delay can not be lower than .3 seconds.
     public void IncreaseStepDelay(float seconds)
     {
-        if (_stepDelay + seconds < .3f) return;
-        _stepDelay += seconds;
+        _stepDelay = _stepDelay + seconds < .3f ? .3f : _stepDelay + seconds;
         print("Step delay is now: " + _stepDelay);
     }
 }
