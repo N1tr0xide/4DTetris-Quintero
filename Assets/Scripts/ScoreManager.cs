@@ -8,6 +8,7 @@ public class ScoreManager : MonoBehaviour
     private int _clears, _level, _highScore, _score;
     
     [SerializeField] private GameUIManager _gameUIManager;
+    [SerializeField] private AudioClip _clearSound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -41,6 +42,7 @@ public class ScoreManager : MonoBehaviour
 
     private void BoardOnClear()
     {
+        AudioManager.Instance.PlayOneShot(_clearSound);
         _clears++;
         _score += 100;
         

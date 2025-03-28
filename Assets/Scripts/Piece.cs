@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class Piece : MonoBehaviour
@@ -14,6 +15,7 @@ public class Piece : MonoBehaviour
     private float _stepDelay = 1f, _currentStepTime;
 
     [SerializeField] private bool _enablePlayerInput;
+    [SerializeField] private AudioClip[] _pieceSounds;
 
     public Vector3Int Position { get; private set; }
     public Vector3Int[] Cells { get; private set; }
@@ -21,10 +23,10 @@ public class Piece : MonoBehaviour
 
     public event Action OnGameOver;
     
-    private void Start()
+    private void Awake()
     {
         _board = GetComponent<Board>();
-        
+
         if(!_enablePlayerInput) return;
         _input = new InputSystem_Actions();
         _input.Player.Enable();
@@ -65,7 +67,6 @@ public class Piece : MonoBehaviour
         }
         
         _board.SetPiece(this);
-        
         if(!_autoMove) StartCoroutine(AutoMove());
     }
 
@@ -73,20 +74,23 @@ public class Piece : MonoBehaviour
 
     private void PerformMove(InputAction.CallbackContext obj)
     {
-        Vector2 v2 = obj.ReadValue<Vector2>();
-        if(v2 is { x: 1, y: 1 } or { x: -1, y: -1 }) return;
-        Vector2Int v2I = Vector2Int.RoundToInt(v2);
-
-        if (v2I == -_translation) //Hard drop if input is inverse of falling direction.
+        if(!_board.IsValidOnBounds(Position)) return; //cancel if piece is out of bounds.
+        Vector2Int v2I = Vector2Int.RoundToInt(obj.ReadValue<Vector2>());
+        if(v2I is { x: 1, y: 1 } or { x: -1, y: -1 } or { x: 1, y: -1 } or { x: -1, y: 1 } ) return; //cancel any diagonals
+        
+        AudioManager.Instance.PlayOneShot(_pieceSounds[Random.Range(0, _pieceSounds.Length)]);
+        
+        if (v2I == _translation * -1) //Hard drop if input is inverse of falling direction.
         {
             HardDrop();
             return;
         }
-
+        
         _board.ClearPiece(this);
         
         if (!Move(v2I, out bool outOfBounds))
         {
+            print("lock in moved: " + outOfBounds + " : " + Tetromino.TetrominoType+ " : " + Position);
             Lock(outOfBounds);
             return;
         }
@@ -96,9 +100,11 @@ public class Piece : MonoBehaviour
     
     private void PerformRotate(InputAction.CallbackContext obj)
     {
+        if(!_board.IsValidOnBounds(Position)) return; //cancel if piece is out of bounds.
         int direction = Mathf.RoundToInt(obj.ReadValue<float>());
         if(direction is not (1 or -1)) return;
         
+        AudioManager.Instance.PlayOneShot(_pieceSounds[Random.Range(0, _pieceSounds.Length)]);
         _board.ClearPiece(this);
         Rotate(direction);
         _board.SetPiece(this);
@@ -111,13 +117,14 @@ public class Piece : MonoBehaviour
         Vector3Int newPos = Position;
         newPos.x += translation.x;
         newPos.y += translation.y;
-        
+
         bool isValidTile = _board.IsValidOnTilemap(this, newPos);
         bool isValidOnBounds = _board.IsValidOnBounds(newPos);
         isOutOfBounds = !isValidOnBounds; //if piece is not on valid bounds it means it's out Of Bounds :)
-        
-        if (isValidTile && isValidOnBounds) Position = newPos;
-        return isValidTile && isValidOnBounds;
+
+        if (!isValidTile || !isValidOnBounds) return false;
+        Position = newPos;
+        return true;
     }
 
     private void Rotate(int direction)

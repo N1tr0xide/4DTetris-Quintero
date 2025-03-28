@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818d8e8f0b2b2424199999a915193bfd, type: 3}
   m_Name: Right 2
   m_EditorClassIdentifier: 
-  SpawnPoint: {x: 45, y: 20}
+  SpawnPoint: {x: 45, y: 10}
   GravityDirection: 2
