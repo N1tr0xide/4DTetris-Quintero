@@ -48,6 +48,6 @@ public class GameUIManager : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("Scenes/Game");
+        SceneManager.LoadScene("Scenes/MainMenu");
     }
 }

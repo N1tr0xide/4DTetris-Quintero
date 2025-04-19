@@ -52412,7 +52412,8 @@ PrefabInstance:
         \n\nBe careful! If you accidentally throw a piece to any border of the screen
         or run out of room on any side for incoming pieces, it's game over. Strategically
         place the blocks while managing space from all directions to survive and
-        achieve the highest score!"
+        achieve the highest score!\n\nControls:\nArrow Keys/wasd to move piece.\nz/x
+        or o/p to rotate left and right respectively."
       objectReference: {fileID: 0}
     - target: {fileID: 978885522513683603, guid: 87708a39056c0084bbf7e9f5ae88edc3, type: 3}
       propertyPath: m_Pivot.x
@@ -52504,7 +52505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3540620610091643955, guid: 87708a39056c0084bbf7e9f5ae88edc3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -569.99994
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3540620610091643955, guid: 87708a39056c0084bbf7e9f5ae88edc3, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -52513,6 +52514,10 @@ PrefabInstance:
     - target: {fileID: 3540620610091643955, guid: 87708a39056c0084bbf7e9f5ae88edc3, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3576246348712421955, guid: 87708a39056c0084bbf7e9f5ae88edc3, type: 3}
+      propertyPath: m_Color.a
+      value: 0.88235295
       objectReference: {fileID: 0}
     - target: {fileID: 4107383529887285645, guid: 87708a39056c0084bbf7e9f5ae88edc3, type: 3}
       propertyPath: m_AnchorMax.y
@@ -52524,11 +52529,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4107383529887285645, guid: 87708a39056c0084bbf7e9f5ae88edc3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -450
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4107383529887285645, guid: 87708a39056c0084bbf7e9f5ae88edc3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -569.99994
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4107383529887285645, guid: 87708a39056c0084bbf7e9f5ae88edc3, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -52552,11 +52557,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7705780547263361254, guid: 87708a39056c0084bbf7e9f5ae88edc3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 450.00006
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7705780547263361254, guid: 87708a39056c0084bbf7e9f5ae88edc3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -569.99994
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7705780547263361254, guid: 87708a39056c0084bbf7e9f5ae88edc3, type: 3}
       propertyPath: m_AnchoredPosition.x
